@@ -8,30 +8,21 @@ function playRock() {
         } else {computerChoice = "scissors" }
     if (computerChoice === "rock") {
             roundAnnounce.textContent = "TIE GAME!"
-            console.log("Computer: Rock");
-            console.log("User: Rock");    
-            console.log("Tie game")
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
     } else if (computerChoice === "paper") {
             computerScore++
             roundAnnounce.textContent = "YOU LOSE!"
-            console.log("Computer: Paper");
-            console.log("User: Rock");
-            console.log("Paper beats rock. Oof, sorry. You lose bud");
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
             compScore.textContent = "Computer Score: " + computerScore;
     } else if (computerChoice === "scissors") {
             userScore++
             roundAnnounce.textContent = "YOU WIN!"
-            console.log("Computer: Scissors");
-            console.log("User: Rock");
-            console.log("You win!");
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
             playerScore.textContent = "User Score: " + userScore;
         }
+    if (computerScore === 5) {
+        alert("Computer wins!");
+    }
+    if (userScore === 5) {
+        alert("You win!");
+    }
     }
 
 function playPaper() {
@@ -41,31 +32,22 @@ function playPaper() {
         } else {computerChoice = "scissors" }
     if (computerChoice === "paper") {
             roundAnnounce.textContent = "TIE GAME!"
-            console.log("Computer: Paper");
-            console.log("User: Paper");    
-            console.log("Tie game")
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
     } else if (computerChoice === "rock") {
             userScore++
             roundAnnounce.textContent = "YOU WIN!"
-            console.log("Computer: Rock");
-            console.log("User: Paper");
-            console.log("You win!");
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
             playerScore.textContent = "User Score: " + userScore;
     } else if (computerChoice === "scissors") {
             computerScore++
             roundAnnounce.textContent = "YOU LOSE!"
-            console.log("Computer: Scissors");
-            console.log("User: Paper");
-            console.log("Paper beats rock. Oof, sorry. You lose bud");
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
             compScore.textContent = "Computer Score: " + computerScore;
         }
+    if (computerScore === 5) {
+        alert("Computer wins!");
     }
+    if (userScore === 5) {
+        alert("You win!");
+    }
+        }
 
 function playScissors() {
     let computerChoice = Math.random();
@@ -74,30 +56,22 @@ function playScissors() {
         } else {computerChoice = "scissors" }
     if (computerChoice === "scissors") {
             roundAnnounce.textContent = "TIE GAME!"
-            console.log("Computer: Scissors");
-            console.log("User: Scissors");    
-            console.log("Tie game")
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
     } else if (computerChoice === "rock") {
             computerScore++
             roundAnnounce.textContent = "YOU LOSE!"
-            console.log("Computer: Rock");
-            console.log("User: Scissors");
-            console.log("Rock smash scissors");
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
             compScore.textContent = "Computer Score: " + computerScore;
     } else if (computerChoice === "paper") {
             userScore++
             roundAnnounce.textContent = "YOU WIN!"
-            console.log("Computer: Paper");
-            console.log("User: Scissors");
-            console.log("You win!");
-            console.log("User Score: " + userScore);
-            console.log("Computer Score: " + computerScore);
             playerScore.textContent = "User Score: " + userScore;
         }
+    if (computerScore === 5) {
+        alert("Computer wins!");
+    }
+    if (userScore === 5) {
+        alert("You win!");
+    }
+
     }
 
 const rockButton = document.querySelector('#rock');
@@ -117,17 +91,22 @@ scissorsButton.addEventListener('click', () => {
 
 const playerScore = document.createElement('div');
 playerScore.style.backgroundColor = "lightblue";
+playerScore.style.padding = "20px";
 playerScore.textContent = "User Score: " + userScore;
 container.appendChild(playerScore);
 
 const compScore = document.createElement('div');
 compScore.style.backgroundColor = "pink";
+compScore.style.padding = "20px";
 compScore.textContent = "Computer Score: " + computerScore;
 container.appendChild(compScore);
 
 const roundAnnounce = document.createElement('div');
-roundAnnounce.style.backgroundColor = "teal";
-roundAnnounce.textContent = "Who will win!"
+roundAnnounce.style.backgroundColor = "lightgreen";
+roundAnnounce.style.padding = "20px";
+roundAnnounce.style.fontWeight = "bold";
+roundAnnounce.style.fontSize = "50px";
+roundAnnounce.textContent = "Who will win?!"
 container.appendChild(roundAnnounce);
 
 
