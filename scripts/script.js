@@ -19,9 +19,15 @@ function playRock() {
         }
     if (computerScore === 5) {
         alert("Computer wins!");
+        playerScore.textContent = "User Score: " + 0;
+        compScore.textContent = "Computer Score: " + 0;
+        roundAnnounce.textContent = "Rematch?";
     }
     if (userScore === 5) {
-        alert("You win!");
+        alert("Player wins!");
+        playerScore.textContent = "User Score: " + 0;
+        compScore.textContent = "Computer Score: " + 0;
+        roundAnnounce.textContent = "Rematch?";
     }
     }
 
@@ -43,9 +49,15 @@ function playPaper() {
         }
     if (computerScore === 5) {
         alert("Computer wins!");
+        playerScore.textContent = "User Score: " + 0;
+        compScore.textContent = "Computer Score: " + 0;
+        roundAnnounce.textContent = "Rematch?";
     }
     if (userScore === 5) {
-        alert("You win!");
+        alert("Player wins!");
+        playerScore.textContent = "User Score: " + 0;
+        compScore.textContent = "Computer Score: " + 0;
+        roundAnnounce.textContent = "Rematch?";
     }
         }
 
@@ -67,9 +79,16 @@ function playScissors() {
         }
     if (computerScore === 5) {
         alert("Computer wins!");
+        playerScore.textContent = "User Score: " + 0;
+        compScore.textContent = "Computer Score: " + 0;
+        roundAnnounce.textContent = "Rematch?";
+
     }
     if (userScore === 5) {
         alert("You win!");
+        playerScore.textContent = "User Score: " + 0;
+        compScore.textContent = "Computer Score: " + 0;
+        roundAnnounce.textContent = "Rematch?";
     }
 
     }
